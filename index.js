@@ -13,12 +13,13 @@
 let password
 let atempt = 1
 do {
-    password = +prompt()
-    if(password !==7777){
-        let atempt_counter = atempt++   
+    let atempt_counter = atempt++   
+    password = +prompt(`Введите пароль`)
+    if(password !==7777 && atempt !== 2){
         alert(`Попытка номер ${atempt_counter}` )  
         if(atempt_counter === 4){
-            break
+            alert(`ПОПЫТКИ ЗАКОНЧИЛИСЬ` ) 
+            break 
         }
     }
 } while (password !== 7777);
